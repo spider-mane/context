@@ -4,15 +4,9 @@ namespace WebTheory\Context;
 
 class Selector
 {
-    /**
-     * @var array
-     */
-    protected $items;
+    protected array $items;
 
-    /**
-     * @var array
-     */
-    protected $contexts;
+    protected array $contexts;
 
     public function __construct(array $items, array $contexts)
     {

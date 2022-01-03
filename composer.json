@@ -16,13 +16,15 @@
     "context",
     "webtheory"
   ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "php": ">=7.4"
+    "php": "^7.4 || ^8.0"
   },
   "require-dev": {
     "captainhook/captainhook": "^5.10",
     "fakerphp/faker": "^1.16",
-    "friendsofphp/php-cs-fixer": "^2.15",
+    "friendsofphp/php-cs-fixer": "^3.4",
     "mockery/mockery": "^1.4",
     "phpcompatibility/php-compatibility": "^9.3",
     "phpstan/phpstan": "^0.12.83",
@@ -62,9 +64,20 @@
     ]
   },
   "config": {
+    "optimize-autoloader": true,
     "sort-packages": true,
-    "process-timeout": 0
+    "process-timeout": 0,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  "extra": {
+    "build-paths": {
+      "build": {
+        "phpunit": {},
+        "php-cs-fixer": {}
+      },
+      "logs": {}
+    }
+  }
 }
